@@ -260,13 +260,48 @@
       white-space:nowrap;
       border:0;
     }
-    .hero-title-flash{
-      color:var(--accent);
-      transition:opacity .18s ease, transform .18s ease;
+    .hero-photo-card{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      min-height:420px;
+      overflow:hidden;
+      position:relative;
+    }
+    .hero-photo{
+      width:100%;
+      max-width:360px;
+      aspect-ratio:1 / 1;
+      object-fit:cover;
+      border-radius:22px;
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+      background:#16243c;
+      display:block;
+    }
+    .hero-photo-placeholder{
+      position:absolute;
+      inset:24px;
+      border:2px dashed rgba(102,217,239,.5);
+      border-radius:22px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      color:var(--muted);
+      padding:18px;
+      background:rgba(6,17,31,.25);
+      pointer-events:none;
+    }
+    .hero-photo-placeholder strong{
+      color:var(--text);
+      display:block;
+      margin-bottom:6px;
     }
     @media (max-width: 860px){
       .hero,.grid,.services,.contact-grid,.project-grid{grid-template-columns:1fr}
       .nav{gap:10px}
+      .hero-photo-card{min-height:auto}
     }
   </style>
 </head>
@@ -288,10 +323,12 @@
       <div>
         <span class="pill">Cybersecurity • AI Security • Automation</span>
         <span class="pill">Red Teaming • Research • Projects</span>
+
         <h1>
           <span class="sr-only">InfoSecurity specialist</span>
           <span id="heroTitle" aria-hidden="true">InfoSecurity specialist</span>
         </h1>
+
         <p class="lead">
           Hi, my name is Divy Patel. I focus on AI security research, penetration testing, security operations, and automation.
           I build hands-on projects, test systems for weaknesses, and turn technical work into clear, useful outcomes.
@@ -330,12 +367,14 @@
         <a class="btn" href="#contact">Contact Me</a>
       </div>
 
-      <div class="card">
-        <h2>Quick Info</h2>
-        <p><strong>Name:</strong> Divy Patel</p>
-        <p><strong>Location:</strong> Buffalo Grove / Chicago, Illinois</p>
-        <p><strong>Focus:</strong> Cybersecurity, AI security, scripting</p>
-        <p><strong>Background:</strong> Security operations, red team, AD, automation</p>
+      <div class="card hero-photo-card">
+        <img src="images/my-photo.jpg" alt="Photo of Divy Patel" class="hero-photo">
+        <div class="hero-photo-placeholder">
+          <div>
+            <strong>Photo placeholder</strong>
+            Replace <code>images/my-photo.jpg</code> with your picture later.
+          </div>
+        </div>
       </div>
     </section>
 
@@ -479,64 +518,49 @@
     </footer>
   </div>
 
-<script>
-  const hero = document.getElementById('heroTitle');
-  const states = ['InfoSecurity specialist', 'Inf0S3cur1ty specialist'];
+  <script>
+    const hero = document.getElementById('heroTitle');
+    const states = ['InfoSecurity specialist', 'Inf0S3cur1ty specialist'];
 
-  const swapMap = {
-    i: '1',
-    I: '1',
-    o: '0',
-    O: '0',
-    e: '3',
-    E: '3',
-    a: '4',
-    A: '4',
-    s: '5',
-    S: '5',
-    t: '7',
-    T: '7',
-    l: '1',
-    L: '1'
-  };
+    const swapMap = { i:'1', I:'1', o:'0', O:'0' };
 
-  let stateIndex = 0;
-  let current = states[stateIndex];
-  hero.textContent = current;
-
-  function nextFrame(fromText, toText) {
-    const arr = fromText.split('');
-    const diff = [];
-
-    for (let i = 0; i < Math.max(fromText.length, toText.length); i++) {
-      const a = fromText[i] || '';
-      const b = toText[i] || '';
-      if (a !== b) diff.push(i);
-    }
-
-    if (!diff.length) return toText;
-
-    const i = diff[Math.floor(Math.random() * diff.length)];
-    arr[i] = toText[i] || '';
-
-    for (let j = 0; j < arr.length; j++) {
-      if (arr[j] && swapMap[arr[j]] && Math.random() < 0.15) {
-        arr[j] = swapMap[arr[j]];
-      }
-    }
-
-    return arr.join('');
-  }
-
-  setInterval(() => {
-    const target = states[(stateIndex + 1) % states.length];
-    current = nextFrame(current, target);
+    let stateIndex = 0;
+    let current = states[stateIndex];
     hero.textContent = current;
 
-    if (current === target) {
-      stateIndex = (stateIndex + 1) % states.length;
+    function nextFrame(fromText, toText) {
+      const arr = fromText.split('');
+      const diff = [];
+
+      for (let i = 0; i < Math.max(fromText.length, toText.length); i++) {
+        const a = fromText[i] || '';
+        const b = toText[i] || '';
+        if (a !== b) diff.push(i);
+      }
+
+      if (!diff.length) return toText;
+
+      const i = diff[Math.floor(Math.random() * diff.length)];
+      arr[i] = toText[i] || '';
+
+      for (let j = 0; j < arr.length; j++) {
+        if (arr[j] && swapMap[arr[j]] && Math.random() < 0.15) {
+          arr[j] = swapMap[arr[j]];
+        }
+      }
+
+      return arr.join('');
     }
-  }, 2000);
-</script>
+
+    setInterval(() => {
+      const target = states[(stateIndex + 1) % states.length];
+      current = nextFrame(current, target);
+      hero.textContent = current;
+
+      if (current === target) {
+        stateIndex = (stateIndex + 1) % states.length;
+      }
+    }, 2000);
+  </script>
 </body>
 </html>
