@@ -3,35 +3,189 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Divy Patel | Cybersecurity, Projects, Repair Business</title>
-  <meta name="description" content="Divy Patel's portfolio website with resume, projects, and repair business information." />
+  <title>Divy Patel | Cybersecurity & AI Security</title>
+  <meta name="description" content="Divy Patel's cybersecurity and AI security portfolio, services, skills, experience, and contact information." />
   <style>
-    :root{--bg:#0b1220;--card:#111a2e;--text:#e8eefc;--muted:#a9b7d0;--accent:#66d9ef;--accent2:#8cffc1;--line:#22304d}
-    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Arial,Helvetica,sans-serif;background:linear-gradient(180deg,#08101d 0%,#0b1220 100%);color:var(--text);line-height:1.6}
-    a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
-    .wrap{max-width:1050px;margin:0 auto;padding:24px}
-    .nav{display:flex;gap:16px;flex-wrap:wrap;justify-content:space-between;align-items:center;padding:12px 0 28px;border-bottom:1px solid var(--line)}
-    .nav strong{font-size:1.05rem}.nav-links{display:flex;gap:14px;flex-wrap:wrap}
-    .hero{padding:56px 0 28px;display:grid;grid-template-columns:1.35fr .85fr;gap:24px;align-items:center}
-    .card{background:rgba(17,26,46,.86);border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:0 18px 40px rgba(0,0,0,.24)}
-    h1{font-size:clamp(2rem,5vw,4rem);line-height:1.05;margin:0 0 12px} h2{margin:0 0 14px;font-size:1.6rem} h3{margin:0 0 8px;font-size:1.05rem}
-    p{margin:0 0 12px;color:var(--muted)} .lead{font-size:1.07rem} .pill{display:inline-block;padding:7px 12px;border:1px solid var(--line);border-radius:999px;margin:6px 8px 0 0;color:var(--text);background:#0d1628}
-    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:18px 0 0} .full{grid-column:1/-1}
-    ul{margin:10px 0 0 18px;color:var(--muted)} li{margin:6px 0}
-    .section{margin:22px 0 0} .footer{padding:30px 0 20px;color:var(--muted);font-size:.95rem}
-    .btn{display:inline-block;margin-top:10px;padding:10px 14px;border-radius:12px;background:var(--accent);color:#07111f;font-weight:700}
-    @media (max-width: 780px){.hero,.grid{grid-template-columns:1fr}.nav{gap:10px}}
+    :root{
+      --bg:#07111f;
+      --bg2:#0b1628;
+      --card:#0f1a2f;
+      --text:#edf3ff;
+      --muted:#aab8d1;
+      --accent:#66d9ef;
+      --accent2:#8cffc1;
+      --line:#22304d;
+      --shadow:0 18px 45px rgba(0,0,0,.28);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#050c16 0%,#07111f 100%);
+      color:var(--text);
+      line-height:1.6;
+    }
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1120px;margin:0 auto;padding:24px}
+    .nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:16px;
+      flex-wrap:wrap;
+      padding:14px 0 24px;
+      border-bottom:1px solid var(--line);
+    }
+    .brand{
+      font-size:1.05rem;
+      font-weight:700;
+      letter-spacing:.3px;
+    }
+    .nav-links{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      color:var(--muted);
+    }
+    .nav-links a{color:var(--text);opacity:.88}
+    .hero{
+      padding:56px 0 32px;
+      display:grid;
+      grid-template-columns:1.35fr .9fr;
+      gap:24px;
+      align-items:center;
+    }
+    .card{
+      background:rgba(15,26,47,.9);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:24px;
+      box-shadow:var(--shadow);
+    }
+    h1{
+      font-size:clamp(2.2rem,5vw,4.4rem);
+      line-height:1.03;
+      margin:0 0 14px;
+    }
+    h2{
+      margin:0 0 16px;
+      font-size:1.55rem;
+    }
+    h3{
+      margin:0 0 8px;
+      font-size:1.03rem;
+    }
+    p{margin:0 0 12px;color:var(--muted)}
+    .lead{font-size:1.08rem;max-width:60ch}
+    .pill{
+      display:inline-block;
+      padding:7px 12px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      margin:6px 8px 0 0;
+      background:var(--bg2);
+      color:var(--text);
+      font-size:.95rem;
+    }
+    .btn{
+      display:inline-block;
+      margin-top:14px;
+      padding:11px 16px;
+      border-radius:12px;
+      background:var(--accent);
+      color:#06111f;
+      font-weight:700;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:18px;
+      margin-top:18px;
+    }
+    .full{grid-column:1/-1}
+    .section{margin-top:22px}
+    ul{margin:10px 0 0 18px;color:var(--muted)}
+    li{margin:7px 0}
+    .subtle{
+      color:var(--muted);
+      font-size:.96rem;
+    }
+    .services{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:16px;
+      margin-top:10px;
+    }
+    .service{
+      background:rgba(11,22,40,.7);
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:18px;
+    }
+    .skill{
+      margin:14px 0 16px;
+    }
+    .skill-head{
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:8px;
+      color:var(--text);
+    }
+    .bar{
+      width:100%;
+      height:10px;
+      border-radius:999px;
+      background:#17253d;
+      overflow:hidden;
+      border:1px solid #243352;
+    }
+    .fill{
+      height:100%;
+      border-radius:999px;
+      background:linear-gradient(90deg,var(--accent),var(--accent2));
+    }
+    .exp{
+      display:grid;
+      gap:16px;
+    }
+    .exp-item{
+      padding:18px;
+      border:1px solid var(--line);
+      border-radius:16px;
+      background:rgba(11,22,40,.65);
+    }
+    .meta{
+      color:var(--accent2);
+      font-size:.95rem;
+      margin-bottom:8px;
+      display:block;
+    }
+    .footer{
+      padding:30px 0 20px;
+      color:var(--muted);
+      font-size:.95rem;
+      text-align:center;
+    }
+    @media (max-width: 860px){
+      .hero,.grid,.services{grid-template-columns:1fr}
+      .nav{gap:10px}
+    }
   </style>
 </head>
 <body>
   <div class="wrap">
     <header class="nav">
-      <strong>Divy Patel</strong>
+      <div class="brand">Divy Patel</div>
       <nav class="nav-links">
         <a href="#about">About</a>
-        <a href="#resume">Resume</a>
-        <a href="#projects">Projects</a>
-        <a href="#repair">Repair Business</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#services">Services</a>
+        <a href="#skills">Skills</a>
+        <a href="#experiences">Experiences</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
@@ -39,77 +193,158 @@
     <section class="hero">
       <div>
         <span class="pill">Cybersecurity • AI Security • Automation</span>
-        <span class="pill">Resume • Projects • Business</span>
-        <h1>My work, my projects, and my repair business in one place.</h1>
-        <p class="lead">I build secure systems, test AI and security tools, automate technical workflows, and offer local repair services.</p>
+        <span class="pill">Red Teaming • Research • Projects</span>
+        <h1>Cybersecurity and AI security professional building practical, secure systems.</h1>
+        <p class="lead">
+          Hi, my name is Divy Patel. I focus on AI security research, penetration testing, security operations, and automation.
+          I build hands-on projects, test systems for weaknesses, and turn technical work into clear, useful outcomes.
+        </p>
         <a class="btn" href="#contact">Contact Me</a>
       </div>
+
       <div class="card">
         <h2>Quick Info</h2>
         <p><strong>Name:</strong> Divy Patel</p>
-        <p><strong>Location:</strong> Chicago, Illinois</p>
+        <p><strong>Location:</strong> Buffalo Grove / Chicago, Illinois</p>
         <p><strong>Focus:</strong> Cybersecurity, AI security, scripting</p>
-        <p><strong>Business:</strong> Repair services and tech help</p>
+        <p><strong>Background:</strong> Security operations, red team, AD, automation</p>
       </div>
     </section>
 
     <main class="grid">
       <section class="card section full" id="about">
         <h2>About</h2>
-        <p>Cybersecurity and risk professional with 3+ years of experience supporJng security operaJons, access control, documentaJon
-standards, and technical risk analysis in complex environments. Experience developing security policies, managing AcJve Directory
-access, communicaJng risk to stakeholders, and supporJng secure research and operaJonal workflows.</p>
+        <p>
+          I am a cybersecurity and risk professional with 3+ years of experience supporting security operations,
+          access control, documentation standards, and technical risk analysis in complex environments [file:1].
+        </p>
+        <p>
+          My work includes AI security research, Active Directory administration, ethical hacking on open-source LLMs,
+          compliance-aligned security practices, and automation for data extraction and analysis [file:1].
+        </p>
+        <p>
+          I also like building personal projects, experimenting with systems, and staying sharp through hands-on learning,
+          especially where cybersecurity, AI, and infrastructure overlap [file:1].
+        </p>
       </section>
 
-      <section class="card section" id="resume">
-        <h2>Resume Highlights</h2>
-        <h3>Skills</h3>
-        <ul>
-          <li>AI security and red teaming.</li>
-          <li>Penetration testing and vulnerability research.</li>
-          <li>Python, shell scripting, and automation.</li>
-          <li>Network security, Linux, macOS, and Windows.</li>
-        </ul>
-        <h3 style="margin-top:16px">Experience</h3>
-        <ul>
-          <li>Security research and vulnerability reporting.</li>
-          <li>Data extraction and cleaning with Python and Excel.</li>
-          <li>Forensics tooling and endpoint/network analysis.</li>
-        </ul>
+      <section class="card section full" id="portfolio">
+        <h2>Portfolio</h2>
+        <p class="subtle">Homemade projects and technical work that show how I approach security, analysis, and tooling.</p>
+        <div class="services">
+          <div class="service">
+            <h3>AI Security Research</h3>
+            <p>Testing emerging LLMs for injection risks, data leakage, and unsafe model behavior.</p>
+          </div>
+          <div class="service">
+            <h3>Offline Password Cracking System</h3>
+            <p>Secure red-team tooling built for restricted environments with statistical performance analysis.</p>
+          </div>
+          <div class="service">
+            <h3>Data Automation</h3>
+            <p>Python and Excel workflows for extraction, cleaning, and reporting.</p>
+          </div>
+          <div class="service">
+            <h3>Physics-Based MATLAB Project</h3>
+            <p>Collision simulation with parameter sweeps, modeling, and visualization.</p>
+          </div>
+        </div>
       </section>
 
-      <section class="card section" id="projects">
-        <h2>Projects</h2>
-        <ul>
-          <li>AI security testing and reporting.</li>
-          <li>Offline password-cracking system with AI/ML integration.</li>
-          <li>Automation scripts for data processing and verification.</li>
-          <li>Raspberry Pi and Linux tooling experiments.</li>
-        </ul>
+      <section class="card section full" id="services">
+        <h2>Services</h2>
+        <p class="subtle">Practical help for security, troubleshooting, and technical improvement.</p>
+        <div class="services">
+          <div class="service">
+            <h3>Cybersecurity Consulting</h3>
+            <p>Security reviews, risk analysis, and guidance for technical environments.</p>
+          </div>
+          <div class="service">
+            <h3>AI Security Review</h3>
+            <p>Assessment of LLM workflows, policy gaps, and model risk considerations.</p>
+          </div>
+          <div class="service">
+            <h3>Automation & Data Workflows</h3>
+            <p>Python-based extraction, cleaning, validation, and reporting automation.</p>
+          </div>
+          <div class="service">
+            <h3>Repair & Tech Help</h3>
+            <p>Device troubleshooting, setup, and general technical support for local clients.</p>
+          </div>
+        </div>
       </section>
 
-      <section class="card section full" id="repair">
-        <h2>Repair Business</h2>
-        <p>Use this section for your small repair business details and customer-facing info.</p>
-        <ul>
-          <li><strong>Services:</strong> Device repair, troubleshooting, setup, and support.</li>
-          <li><strong>Service area:</strong> Buffalo Grove and nearby areas.</li>
-          <li><strong>Hours:</strong> Add your availability here.</li>
-          <li><strong>Pricing:</strong> Add basic rates or a free estimate line.</li>
-        </ul>
+      <section class="card section" id="skills">
+        <h2>Skills</h2>
+
+        <div class="skill">
+          <div class="skill-head"><span>AI Security & Red Teaming</span><span>90%</span></div>
+          <div class="bar"><div class="fill" style="width:90%"></div></div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-head"><span>Penetration Testing & Vulnerability Research</span><span>85%</span></div>
+          <div class="bar"><div class="fill" style="width:85%"></div></div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-head"><span>Python & Automation</span><span>85%</span></div>
+          <div class="bar"><div class="fill" style="width:85%"></div></div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-head"><span>Windows, Linux, macOS</span><span>80%</span></div>
+          <div class="bar"><div class="fill" style="width:80%"></div></div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-head"><span>Active Directory & IAM</span><span>80%</span></div>
+          <div class="bar"><div class="fill" style="width:80%"></div></div>
+        </div>
+      </section>
+
+      <section class="card section" id="experiences">
+        <h2>Experiences</h2>
+        <div class="exp">
+          <div class="exp-item">
+            <span class="meta">Nov 2024 – Present</span>
+            <h3>Artificial Intelligence Security Analyst</h3>
+            <p>National Institute for Aviation Research</p>
+            <p>Lead AI security research, test LLM vulnerabilities, manage Active Directory access, and write internal AI security protocols [file:1].</p>
+          </div>
+
+          <div class="exp-item">
+            <span class="meta">Jan 2024 – Jan 2025</span>
+            <h3>Department of Defense Red Team - Millennium Research Project</h3>
+            <p>Built a secure offline system, analyzed password-cracking performance, and developed data pipelines for operational research [file:1].</p>
+          </div>
+
+          <div class="exp-item">
+            <span class="meta">Nov 2024 – Mar 2025</span>
+            <h3>IEEE Region 5 Co-Chair</h3>
+            <p>Directed budget planning, outreach, chapter communication, and cybersecurity-focused workshop coordination [file:1].</p>
+          </div>
+
+          <div class="exp-item">
+            <span class="meta">Oct 2021 – Sep 2024</span>
+            <h3>Student Assistant</h3>
+            <p>National Institute for Aviation Research — automated extraction and cleaning, supported DoD research, and improved cataloging workflows [file:1].</p>
+          </div>
+        </div>
       </section>
 
       <section class="card section full" id="contact">
         <h2>Contact</h2>
-        <p><strong>Email:</strong> divypatel730@gmail.com</p>
-        <p><strong>LinkedIn:</strong> www.linkedin.com/in/divypatel1</p>
-        <p><strong>GitHub:</strong> https://github.com/DCP449</p>
+        <p>Lets connect about cybersecurity, AI security, automation, or repair support.</p>
+        <p><strong>Email:</strong> <a href="mailto:divypatel730@gmail.com">divypatel730@gmail.com</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/divypatel1" target="_blank" rel="noreferrer">linkedin.com/in/divypatel1</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/DCP449" target="_blank" rel="noreferrer">github.com/DCP449</a></p>
         <p><strong>Phone:</strong> 417-770-2432</p>
       </section>
     </main>
 
     <footer class="footer">
-      <p>Built with GitHub Pages. Replace the placeholder contact details before publishing.</p>
+      <p>© 2026 Divy Patel. All rights reserved.</p>
     </footer>
   </div>
 </body>
