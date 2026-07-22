@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Divy Patel | Cybersecurity & AI Security</title>
   <meta name="description" content="Divy Patel's cybersecurity and AI security portfolio, services, skills, experience, and contact information." />
   <style>
@@ -99,6 +100,34 @@
       color:#06111f;
       font-weight:700;
     }
+    .icon-row{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:18px;
+    }
+    .icon-link{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 14px;
+      border:1px solid var(--line);
+      border-radius:14px;
+      background:rgba(11,22,40,.72);
+      color:var(--text);
+      transition:transform .15s ease, border-color .15s ease;
+    }
+    .icon-link:hover{
+      text-decoration:none;
+      transform:translateY(-1px);
+      border-color:var(--accent);
+    }
+    .icon{
+      width:20px;
+      height:20px;
+      fill:currentColor;
+      flex:0 0 auto;
+    }
     .grid{
       display:grid;
       grid-template-columns:repeat(2,minmax(0,1fr));
@@ -164,6 +193,31 @@
       margin-bottom:8px;
       display:block;
     }
+    .contact-grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:14px;
+      margin-top:8px;
+    }
+    .contact-card{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      padding:16px;
+      border:1px solid var(--line);
+      border-radius:16px;
+      background:rgba(11,22,40,.72);
+      color:var(--text);
+    }
+    .contact-card:hover{
+      text-decoration:none;
+      border-color:var(--accent);
+    }
+    .contact-card small{
+      display:block;
+      color:var(--muted);
+      margin-top:2px;
+    }
     .footer{
       padding:30px 0 20px;
       color:var(--muted);
@@ -171,7 +225,7 @@
       text-align:center;
     }
     @media (max-width: 860px){
-      .hero,.grid,.services{grid-template-columns:1fr}
+      .hero,.grid,.services,.contact-grid{grid-template-columns:1fr}
       .nav{gap:10px}
     }
   </style>
@@ -194,11 +248,42 @@
       <div>
         <span class="pill">Cybersecurity • AI Security • Automation</span>
         <span class="pill">Red Teaming • Research • Projects</span>
-        <h1>Cybersecurity and AI security professional building practical, secure systems.</h1>
+        <h1>InfoSecurity specialist</h1>
         <p class="lead">
           Hi, my name is Divy Patel. I focus on AI security research, penetration testing, security operations, and automation.
           I build hands-on projects, test systems for weaknesses, and turn technical work into clear, useful outcomes.
         </p>
+
+        <div class="icon-row" aria-label="Social links">
+          <a class="icon-link" href="https://www.linkedin.com/in/divypatel1" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4.98 3.5C4.98 4.88 3.93 6 2.4 6S-.18 4.88-.18 3.5 1 .99 2.4.99 4.98 2.12 4.98 3.5zM.24 8.25h4.3V24H.24V8.25zm7.11 0h4.12v2.15h.06c.57-1.08 1.97-2.22 4.05-2.22 4.33 0 5.12 2.85 5.12 6.56V24h-4.3v-7.68c0-1.83-.03-4.18-2.55-4.18-2.56 0-2.95 2-2.95 4.06V24H7.35V8.25z"/>
+            </svg>
+            LinkedIn
+          </a>
+
+          <a class="icon-link" href="https://github.com/DCP449" target="_blank" rel="noreferrer" aria-label="GitHub">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 .5C5.65.5.5 5.78.5 12.31c0 5.22 3.29 9.65 7.86 11.2.58.11.8-.26.8-.56v-2.1c-3.2.72-3.88-1.4-3.88-1.4-.52-1.35-1.28-1.71-1.28-1.71-1.05-.74.08-.73.08-.73 1.16.08 1.77 1.22 1.77 1.22 1.03 1.82 2.7 1.3 3.36.99.1-.77.4-1.3.72-1.6-2.56-.3-5.25-1.32-5.25-5.89 0-1.3.44-2.37 1.15-3.2-.12-.3-.5-1.53.12-3.18 0 0 .94-.31 3.08 1.22.9-.26 1.86-.39 2.82-.4.96.01 1.92.14 2.82.4 2.14-1.53 3.08-1.22 3.08-1.22.62 1.65.24 2.88.12 3.18.71.83 1.15 1.9 1.15 3.2 0 4.59-2.69 5.59-5.26 5.88.41.37.78 1.1.78 2.22v3.3c0 .3.22.67.81.56 4.56-1.55 7.85-5.98 7.85-11.2C23.5 5.78 18.35.5 12 .5z"/>
+            </svg>
+            GitHub
+          </a>
+
+          <a class="icon-link" href="mailto:divypatel730@gmail.com" aria-label="Email">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M2 4h20v16H2V4zm18 2H4v.37l8 5.33 8-5.33V6zm-18 12h20V9.02l-8.45 5.63a1 1 0 0 1-1.1 0L2 9.02V18z"/>
+            </svg>
+            Email
+          </a>
+
+          <a class="icon-link" href="tel:+14177702432" aria-label="Phone">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6.6 10.8c1.2 2.4 3.2 4.4 5.6 5.6l1.8-1.8c.2-.2.5-.3.8-.2 1 .3 2 .5 3.1.5.5 0 .9.4.9.9V20c0 .5-.4 1-1 1C10.7 21 3 13.3 3 4.5c0-.6.4-1 1-1h3.2c.5 0 .9.4.9.9 0 1.1.2 2.1.5 3.1.1.3 0 .6-.2.8l-1.8 1.5z"/>
+            </svg>
+            Phone
+          </a>
+        </div>
+
         <a class="btn" href="#contact">Contact Me</a>
       </div>
 
@@ -214,18 +299,9 @@
     <main class="grid">
       <section class="card section full" id="about">
         <h2>About</h2>
-        <p>
-          I am a cybersecurity and risk professional with 3+ years of experience supporting security operations,
-          access control, documentation standards, and technical risk analysis in complex environments .
-        </p>
-        <p>
-          My work includes AI security research, Active Directory administration, ethical hacking on open-source LLMs,
-          compliance-aligned security practices, and automation for data extraction and analysis .
-        </p>
-        <p>
-          I also like building personal projects, experimenting with systems, and staying sharp through hands-on learning,
-          especially where cybersecurity, AI, and infrastructure overlap .
-        </p>
+        <p>I am a cybersecurity and risk professional with 3+ years of experience supporting security operations, access control, documentation standards, and technical risk analysis in complex environments.</p>
+        <p>My work includes AI security research, Active Directory administration, ethical hacking on open-source LLMs, compliance-aligned security practices, and automation for data extraction and analysis.</p>
+        <p>I also like building personal projects, experimenting with systems, and staying sharp through hands-on learning, especially where cybersecurity, AI, and infrastructure overlap.</p>
       </section>
 
       <section class="card section full" id="portfolio">
@@ -276,31 +352,11 @@
 
       <section class="card section" id="skills">
         <h2>Skills</h2>
-
-        <div class="skill">
-          <div class="skill-head"><span>AI Security & Red Teaming</span><span>90%</span></div>
-          <div class="bar"><div class="fill" style="width:90%"></div></div>
-        </div>
-
-        <div class="skill">
-          <div class="skill-head"><span>Penetration Testing & Vulnerability Research</span><span>85%</span></div>
-          <div class="bar"><div class="fill" style="width:85%"></div></div>
-        </div>
-
-        <div class="skill">
-          <div class="skill-head"><span>Python & Automation</span><span>85%</span></div>
-          <div class="bar"><div class="fill" style="width:85%"></div></div>
-        </div>
-
-        <div class="skill">
-          <div class="skill-head"><span>Windows, Linux, macOS</span><span>80%</span></div>
-          <div class="bar"><div class="fill" style="width:80%"></div></div>
-        </div>
-
-        <div class="skill">
-          <div class="skill-head"><span>Active Directory & IAM</span><span>80%</span></div>
-          <div class="bar"><div class="fill" style="width:80%"></div></div>
-        </div>
+        <div class="skill"><div class="skill-head"><span>AI Security & Red Teaming</span><span>90%</span></div><div class="bar"><div class="fill" style="width:90%"></div></div></div>
+        <div class="skill"><div class="skill-head"><span>Penetration Testing & Vulnerability Research</span><span>85%</span></div><div class="bar"><div class="fill" style="width:85%"></div></div></div>
+        <div class="skill"><div class="skill-head"><span>Python & Automation</span><span>85%</span></div><div class="bar"><div class="fill" style="width:85%"></div></div></div>
+        <div class="skill"><div class="skill-head"><span>Windows, Linux, macOS</span><span>80%</span></div><div class="bar"><div class="fill" style="width:80%"></div></div></div>
+        <div class="skill"><div class="skill-head"><span>Active Directory & IAM</span><span>80%</span></div><div class="bar"><div class="fill" style="width:80%"></div></div></div>
       </section>
 
       <section class="card section" id="experiences">
@@ -310,25 +366,22 @@
             <span class="meta">Nov 2024 – Present</span>
             <h3>Artificial Intelligence Security Analyst</h3>
             <p>National Institute for Aviation Research</p>
-            <p>Lead AI security research, test LLM vulnerabilities, manage Active Directory access, and write internal AI security protocols .</p>
+            <p>Lead AI security research, test LLM vulnerabilities, manage Active Directory access, and write internal AI security protocols.</p>
           </div>
-
           <div class="exp-item">
             <span class="meta">Jan 2024 – Jan 2025</span>
             <h3>Department of Defense Red Team - Millennium Research Project</h3>
-            <p>Built a secure offline system, analyzed password-cracking performance, and developed data pipelines for operational research .</p>
+            <p>Built a secure offline system, analyzed password-cracking performance, and developed data pipelines for operational research.</p>
           </div>
-
           <div class="exp-item">
             <span class="meta">Nov 2024 – Mar 2025</span>
             <h3>IEEE Region 5 Co-Chair</h3>
-            <p>Directed budget planning, outreach, chapter communication, and cybersecurity-focused workshop coordination .</p>
+            <p>Directed budget planning, outreach, chapter communication, and cybersecurity-focused workshop coordination.</p>
           </div>
-
           <div class="exp-item">
             <span class="meta">Oct 2021 – Sep 2024</span>
             <h3>Student Assistant</h3>
-            <p>National Institute for Aviation Research — automated extraction and cleaning, supported DoD research, and improved cataloging workflows .</p>
+            <p>National Institute for Aviation Research — automated extraction and cleaning, supported DoD research, and improved cataloging workflows.</p>
           </div>
         </div>
       </section>
@@ -336,10 +389,24 @@
       <section class="card section full" id="contact">
         <h2>Contact</h2>
         <p>Lets connect about cybersecurity, AI security, automation, or repair support.</p>
-        <p><strong>Email:</strong> <a href="mailto:divypatel730@gmail.com">divypatel730@gmail.com</a></p>
-        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/divypatel1" target="_blank" rel="noreferrer">linkedin.com/in/divypatel1</a></p>
-        <p><strong>GitHub:</strong> <a href="https://github.com/DCP449" target="_blank" rel="noreferrer">github.com/DCP449</a></p>
-        <p><strong>Phone:</strong> 417-770-2432</p>
+        <div class="contact-grid">
+          <a class="contact-card" href="mailto:divypatel730@gmail.com">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 4h20v16H2V4zm18 2H4v.37l8 5.33 8-5.33V6zm-18 12h20V9.02l-8.45 5.63a1 1 0 0 1-1.1 0L2 9.02V18z"/></svg>
+            <div><strong>Email</strong><small>divypatel730@gmail.com</small></div>
+          </a>
+          <a class="contact-card" href="https://www.linkedin.com/in/divypatel1" target="_blank" rel="noreferrer">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.93 6 2.4 6S-.18 4.88-.18 3.5 1 .99 2.4.99 4.98 2.12 4.98 3.5zM.24 8.25h4.3V24H.24V8.25zm7.11 0h4.12v2.15h.06c.57-1.08 1.97-2.22 4.05-2.22 4.33 0 5.12 2.85 5.12 6.56V24h-4.3v-7.68c0-1.83-.03-4.18-2.55-4.18-2.56 0-2.95 2-2.95 4.06V24H7.35V8.25z"/></svg>
+            <div><strong>LinkedIn</strong><small>linkedin.com/in/divypatel1</small></div>
+          </a>
+          <a class="contact-card" href="https://github.com/DCP449" target="_blank" rel="noreferrer">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.78.5 12.31c0 5.22 3.29 9.65 7.86 11.2.58.11.8-.26.8-.56v-2.1c-3.2.72-3.88-1.4-3.88-1.4-.52-1.35-1.28-1.71-1.28-1.71-1.05-.74.08-.73.08-.73 1.16.08 1.77 1.22 1.77 1.22 1.03 1.82 2.7 1.3 3.36.99.1-.77.4-1.3.72-1.6-2.56-.3-5.25-1.32-5.25-5.89 0-1.3.44-2.37 1.15-3.2-.12-.3-.5-1.53.12-3.18 0 0 .94-.31 3.08 1.22.9-.26 1.86-.39 2.82-.4.96.01 1.92.14 2.82.4 2.14-1.53 3.08-1.22 3.08-1.22.62 1.65.24 2.88.12 3.18.71.83 1.15 1.9 1.15 3.2 0 4.59-2.69 5.59-5.26 5.88.41.37.78 1.1.78 2.22v3.3c0 .3.22.67.81.56 4.56-1.55 7.85-5.98 7.85-11.2C23.5 5.78 18.35.5 12 .5z"/></svg>
+            <div><strong>GitHub</strong><small>github.com/DCP449</small></div>
+          </a>
+          <a class="contact-card" href="tel:+14177702432">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.2 2.4 3.2 4.4 5.6 5.6l1.8-1.8c.2-.2.5-.3.8-.2 1 .3 2 .5 3.1.5.5 0 .9.4.9.9V20c0 .5-.4 1-1 1C10.7 21 3 13.3 3 4.5c0-.6.4-1 1-1h3.2c.5 0 .9.4.9.9 0 1.1.2 2.1.5 3.1.1.3 0 .6-.2.8l-1.8 1.5z"/></svg>
+            <div><strong>Phone</strong><small>417-770-2432</small></div>
+          </a>
+        </div>
       </section>
     </main>
 
