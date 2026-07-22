@@ -483,68 +483,60 @@
   const hero = document.getElementById('heroTitle');
   const states = ['InfoSecurity specialist', 'Inf0S3cur1ty specialist'];
 
-  const scrambleChars = [
-    '0','1','3','4','5','7',
-    'i','l','o','s','e','u','c','r','t','y',
-    'I','O','S','E','U','C','R','T','Y'
-  ];
+  const swapMap = {
+    i: '1',
+    I: '1',
+    o: '0',
+    O: '0',
+    e: '3',
+    E: '3',
+    a: '4',
+    A: '4',
+    s: '5',
+    S: '5',
+    t: '7',
+    T: '7',
+    l: '1',
+    L: '1'
+  };
 
-  let current = states[0];
-  let targetIndex = 1;
+  let stateIndex = 0;
+  let current = states[stateIndex];
+  hero.textContent = current;
 
-  function randomChar() {
-    return scrambleChars[Math.floor(Math.random() * scrambleChars.length)];
-  }
+  function nextFrame(fromText, toText) {
+    const arr = fromText.split('');
+    const diff = [];
 
-  function scrambleTo(nextText) {
-    const fromText = current;
-    const maxLen = Math.max(fromText.length, nextText.length);
-    let frame = 0;
-    const queue = [];
-
-    for (let i = 0; i < maxLen; i++) {
-      const from = fromText[i] || '';
-      const to = nextText[i] || '';
-      const start = Math.floor(Math.random() * 8);
-      const end = start + Math.floor(Math.random() * 10);
-      queue.push({ from, to, start, end, char: '' });
+    for (let i = 0; i < Math.max(fromText.length, toText.length); i++) {
+      const a = fromText[i] || '';
+      const b = toText[i] || '';
+      if (a !== b) diff.push(i);
     }
 
-    clearInterval(hero._scrambleTimer);
+    if (!diff.length) return toText;
 
-    hero._scrambleTimer = setInterval(() => {
-      let output = '';
-      let complete = 0;
+    const i = diff[Math.floor(Math.random() * diff.length)];
+    arr[i] = toText[i] || '';
 
-      for (let i = 0; i < queue.length; i++) {
-        const q = queue[i];
-
-        if (frame >= q.end) {
-          complete++;
-          output += q.to;
-        } else if (frame >= q.start) {
-          if (!q.char || Math.random() < 0.35) q.char = randomChar();
-          output += q.char;
-        } else {
-          output += q.from;
-        }
+    for (let j = 0; j < arr.length; j++) {
+      if (arr[j] && swapMap[arr[j]] && Math.random() < 0.15) {
+        arr[j] = swapMap[arr[j]];
       }
+    }
 
-      hero.textContent = output;
-
-      if (complete === queue.length) {
-        clearInterval(hero._scrambleTimer);
-        current = nextText;
-      }
-
-      frame++;
-    }, 28);
+    return arr.join('');
   }
 
   setInterval(() => {
-    targetIndex = (targetIndex + 1) % states.length;
-    scrambleTo(states[targetIndex]);
-  }, 1200);
+    const target = states[(stateIndex + 1) % states.length];
+    current = nextFrame(current, target);
+    hero.textContent = current;
+
+    if (current === target) {
+      stateIndex = (stateIndex + 1) % states.length;
+    }
+  }, 180);
 </script>
 </body>
 </html>
